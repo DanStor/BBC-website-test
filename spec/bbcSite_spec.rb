@@ -13,8 +13,6 @@ describe "testing the bbc site" do
       expect(@driver.currentUrl).to eq "https://account.bbc.com/signin"
     end
 
-
-
     it "should allow the user to login with the correct details" do
 
     end

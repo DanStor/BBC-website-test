@@ -13,10 +13,6 @@ class BBCHomepage
     @driver.get(HOMEPAGE_URL)
   end
 
-  def signInLink
-
-  end
-
   def clickSignIn
     @driver.find_element(:id, SIGNIN_LINK).click
   end
