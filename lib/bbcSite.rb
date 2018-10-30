@@ -1,3 +1,5 @@
+require "selenium-webdriver"
+
 class BBCSite
   def bbcHomepage
     BBCHomepage.new
