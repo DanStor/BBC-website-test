@@ -3,8 +3,10 @@ class BBCHomepage
   HOMEPAGE_URL = "https://www.bbc.co.uk"
   SIGNIN_LINK = "idcta-link"
 
-  def initialize
-    @driver = Selenium::WebDriver.for :chrome
+  attr_accessor :driver
+
+  def initialize driver
+    @driver = driver
   end
 
   def visitHomepage
@@ -12,10 +14,10 @@ class BBCHomepage
   end
 
   def signInLink
-    @driver.get_element(:id, SIGNIN_LINK)
+
   end
 
   def clickSignIn
-    signInLink.click
+    @driver.find_element(:id, SIGNIN_LINK).click
   end
 end
